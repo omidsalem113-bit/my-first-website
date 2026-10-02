@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <title>Omid Salem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="decor decor-top"></div>
+  <div class="decor decor-bottom"></div>
+
+  <main class="page">
+    <div class="theme-switch" aria-label="Theme">
+      <button id="lightMode" class="theme-option" type="button" aria-label="Light mode">☀</button>
+      <button id="darkMode" class="theme-option" type="button" aria-label="Dark mode">☾</button>
+    </div>
+
+    <header class="profile">
+      <h1>Omid Salem</h1>
+      <div class="photo-wrap">
+        <img src="profile.jpg" alt="Omid Salem" class="profile-photo">
+      </div>
+    </header>
+
+    <section class="cards" aria-label="Contact information">
+
+      <article class="contact-card expandable" id="phoneCard">
+        <button class="card-button" type="button" aria-expanded="false">
+          <span class="card-copy">
+            <strong>Phone</strong>
+            <small>Tap to reveal</small>
+          </span>
+          <span class="arrow">›</span>
+        </button>
+        <div class="reveal">
+          <div class="revealed-number">09046870221</div>
+          <div class="actions">
+            <a href="tel:09046870221">Call</a>
+            <button id="copyPhone" type="button">Copy</button>
+          </div>
+        </div>
+      </article>
+
+      <a class="contact-card direct" href="https://instagram.com/omid_.slm" target="_blank" rel="noopener">
+        <span class="card-copy">
+          <strong>Instagram</strong>
+          <small>@omid_.slm</small>
+        </span>
+        <span class="arrow">›</span>
+      </a>
+
+      <a class="contact-card direct" href="https://t.me/Omid_st116" target="_blank" rel="noopener">
+        <span class="card-copy">
+          <strong>Telegram</strong>
+          <small>@Omid_st116</small>
+        </span>
+        <span class="arrow">›</span>
+      </a>
+
+      <a class="contact-card direct" href="https://eitaa.com/Omid_st116" target="_blank" rel="noopener">
+        <span class="card-copy">
+          <strong>Eitaa</strong>
+          <small>@Omid_st116</small>
+        </span>
+        <span class="arrow">›</span>
+      </a>
+
+      <a class="contact-card direct" href="mailto:omidsalem113@gmail.com">
+        <span class="card-copy">
+          <strong>Email</strong>
+          <small>omidsalem113@gmail.com</small>
+        </span>
+        <span class="arrow">›</span>
+      </a>
+
+      <article class="contact-card expandable" id="emergencyCard">
+        <button class="card-button" type="button" aria-expanded="false">
+          <span class="card-copy">
+            <strong>Emergency Contact</strong>
+            <small>Tap to reveal</small>
+          </span>
+          <span class="arrow">›</span>
+        </button>
+        <div class="reveal">
+          <div class="revealed-name">Alireza Salem</div>
+          <div class="revealed-number">09132768702</div>
+          <div class="actions">
+            <a href="tel:09132768702">Call</a>
+          </div>
+        </div>
+      </article>
+
+      <button class="contact-card save-card" id="saveContact" type="button">
+        <span class="card-copy">
+          <strong>Save Contact</strong>
+          <small>Add to your contacts</small>
+        </span>
+        <span class="arrow">›</span>
+      </button>
+    </section>
+
+    <footer>
+      <span class="footer-line"></span>
+      <span>Omid Salem</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
