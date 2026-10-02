@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <title>Omid Salem</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+      <span id="themeLabel">Dark</span>
+    </button>
+
+    <section class="profile">
+      <h1>Omid Salem</h1>
+      <img class="profile-photo" src="profile.jpg" alt="Omid Salem">
+    </section>
+
+    <section class="cards" aria-label="Contact information">
+
+      <article class="card expandable" id="phoneCard">
+        <button class="card-main" type="button" aria-expanded="false">
+          <span>Phone</span>
+          <span class="chevron">⌄</span>
+        </button>
+        <div class="card-details">
+          <div class="detail-number">09046870221</div>
+          <div class="actions">
+            <a class="action" href="tel:09046870221">Call</a>
+            <button class="action" id="copyPhone" type="button">Copy</button>
+          </div>
+        </div>
+      </article>
+
+      <a class="card link-card" href="https://instagram.com/omid_.slm" target="_blank" rel="noopener">
+        <span>Instagram</span>
+        <span class="arrow">↗</span>
+      </a>
+
+      <a class="card link-card" href="https://t.me/Omid_st116" target="_blank" rel="noopener">
+        <span>Telegram</span>
+        <span class="arrow">↗</span>
+      </a>
+
+      <a class="card link-card" href="https://eitaa.com/Omid_st116" target="_blank" rel="noopener">
+        <span>Eitaa</span>
+        <span class="arrow">↗</span>
+      </a>
+
+      <a class="card link-card" href="mailto:omidsalem113@gmail.com">
+        <span>Email</span>
+        <span class="arrow">↗</span>
+      </a>
+
+      <article class="card expandable" id="emergencyCard">
+        <button class="card-main" type="button" aria-expanded="false">
+          <span>Emergency Contact</span>
+          <span class="chevron">⌄</span>
+        </button>
+        <div class="card-details">
+          <div class="contact-name">Alireza Salem</div>
+          <div class="detail-number">09132768702</div>
+          <div class="actions">
+            <a class="action" href="tel:09132768702">Call</a>
+          </div>
+        </div>
+      </article>
+
+      <button class="save-contact" id="saveContact" type="button">Save Contact</button>
+    </section>
+
+    <footer>Digital Contact Card</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
