@@ -1,16 +1,88 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>سایت من</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: white;
+            padding: 20px;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 600px;
+            padding: 50px 30px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 2;
+            color: #cbd5e1;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 12px;
+            background: white;
+            color: #0f172a;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>سلام! 👋</h1>
+    <div class="card">
 
-    <p>این اولین سایت منه که خودم با گیت‌هاب ساختم 😎</p>
+        <h1>سلام! 👋</h1>
+
+        <p>
+            به اولین سایت من خوش اومدی 😎
+            <br>
+            این سایت رو خودم با GitHub ساختم!
+        </p>
+
+        <a href="#" class="button">یه دکمه‌ی خفن 😎</a>
+
+    </div>
 
 </body>
+
 </html>
