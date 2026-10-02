@@ -1,0 +1,251 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #ffffff;
+  --text: #0a0a0a;
+  --muted: rgba(0, 0, 0, 0.52);
+  --accent: #19d6c5;
+  --accent-hover: #20ead7;
+  --accent-text: #03110f;
+  --shadow: 0 12px 34px rgba(0, 0, 0, 0.10);
+  --radius: 22px;
+}
+
+html[data-theme="dark"] {
+  --bg: #000000;
+  --text: #ffffff;
+  --muted: rgba(255, 255, 255, 0.58);
+  --accent: #19d6c5;
+  --accent-hover: #20ead7;
+  --accent-text: #03110f;
+  --shadow: 0 16px 38px rgba(0, 0, 0, 0.42);
+}
+
+html {
+  color-scheme: light;
+  background: var(--bg);
+  transition: background-color .35s ease;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(25, 214, 197, 0.11), transparent 30%),
+    var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color .35s ease, color .35s ease;
+}
+
+button, a {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.page {
+  width: min(100% - 32px, 480px);
+  margin: 0 auto;
+  padding: 28px 0 34px;
+  position: relative;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 24px;
+  right: 0;
+  border: 1px solid rgba(25, 214, 197, 0.45);
+  background: transparent;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 8px 13px;
+  font-size: 12px;
+  transition: .25s ease;
+}
+
+.theme-toggle:hover {
+  background: rgba(25, 214, 197, 0.10);
+}
+
+.profile {
+  text-align: center;
+  padding-top: 40px;
+  margin-bottom: 30px;
+}
+
+.profile h1 {
+  margin: 0 0 18px;
+  font-size: 25px;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: .2px;
+}
+
+.profile-photo {
+  display: block;
+  width: 122px;
+  height: 122px;
+  object-fit: cover;
+  object-position: center 25%;
+  margin: 0 auto;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+}
+
+.cards {
+  display: grid;
+  gap: 13px;
+}
+
+.card {
+  width: 100%;
+  min-height: 62px;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: var(--accent-text);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  transition:
+    transform .22s ease,
+    background-color .22s ease,
+    box-shadow .22s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  background: var(--accent-hover);
+}
+
+.card:active {
+  transform: scale(.985);
+}
+
+.link-card,
+.save-card,
+.card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 19px 21px;
+}
+
+.link-card,
+.save-card {
+  font-weight: 600;
+  text-align: left;
+}
+
+.card-head {
+  width: 100%;
+  min-height: 62px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  font-weight: 600;
+}
+
+.tap-hint {
+  font-size: 11px;
+  font-weight: 500;
+  opacity: .58;
+  white-space: nowrap;
+}
+
+.card-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  padding: 0 21px;
+  overflow: hidden;
+  transition: grid-template-rows .32s ease, padding-bottom .32s ease;
+}
+
+.card-content > * {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.expandable.open .card-content {
+  grid-template-rows: 1fr;
+  padding-bottom: 20px;
+}
+
+.value {
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: .3px;
+  padding-top: 2px;
+}
+
+.subvalue {
+  font-size: 14px;
+  margin-top: 4px;
+  opacity: .7;
+}
+
+.actions {
+  display: flex;
+  gap: 9px;
+  margin-top: 14px;
+}
+
+.action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 8px 15px;
+  border-radius: 999px;
+  border: 1px solid rgba(3, 17, 15, .18);
+  background: rgba(255, 255, 255, .20);
+  color: inherit;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.action:hover {
+  background: rgba(255, 255, 255, .32);
+}
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 26px;
+  letter-spacing: .5px;
+}
+
+@media (max-width: 420px) {
+  .page {
+    width: min(100% - 24px, 480px);
+    padding-top: 22px;
+  }
+
+  .profile {
+    padding-top: 42px;
+  }
+
+  .profile-photo {
+    width: 112px;
+    height: 112px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: .01ms !important;
+  }
+}
