@@ -1,89 +1,69 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>سایت من</title>
-
-    <style>
-     @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-    font-family: "Vazirmatn", sans-serif;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            color: white;
-            padding: 20px;
-        }
-
-        .card {
-            width: 100%;
-            max-width: 600px;
-            padding: 50px 30px;
-            text-align: center;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 25px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
-        }
-
-        h1 {
-            font-size: 42px;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 18px;
-            line-height: 2;
-            color: #cbd5e1;
-            margin-bottom: 30px;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 14px 28px;
-            border-radius: 12px;
-            background: white;
-            color: #0f172a;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .button:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050505">
+  <title>Omid Salem</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <main class="page">
+    <header class="profile">
+      <h1>Omid Salem</h1>
+      <img class="profile-photo" src="profile.jpg" alt="Omid Salem">
+    </header>
 
-    <div class="card">
+    <section class="cards" aria-label="Contact information">
+      <button class="card reveal-card" type="button" data-target="phone-details">
+        <span>Phone</span>
+      </button>
+      <div id="phone-details" class="details" hidden>
+        <div class="detail-value">09046870221</div>
+        <div class="detail-actions">
+          <a class="action" href="tel:09046870221">Call</a>
+          <button class="action" type="button" data-copy="09046870221">Copy</button>
+        </div>
+      </div>
 
-        <h1>سلام! 👋</h1>
+      <a class="card link-card" href="https://instagram.com/omid_.slm" target="_blank" rel="noopener">
+        <span>Instagram</span>
+      </a>
 
-        <p>
-            به اولین سایت من خوش اومدی 😎
-            <br>
-            این سایت رو خودم با GitHub ساختم!
-        </p>
+      <a class="card link-card" href="https://t.me/Omid_st116" target="_blank" rel="noopener">
+        <span>Telegram</span>
+      </a>
 
-        <a href="#" class="button">یه دکمه‌ی خفن 😎</a>
+      <a class="card link-card" href="https://eitaa.com/Omid_st116" target="_blank" rel="noopener">
+        <span>Eitaa</span>
+      </a>
 
-    </div>
+      <a class="card link-card" href="mailto:omidsalem113@gmail.com">
+        <span>Email</span>
+      </a>
 
+      <button class="card reveal-card" type="button" data-target="emergency-details">
+        <span>Emergency Contact</span>
+      </button>
+      <div id="emergency-details" class="details" hidden>
+        <div class="contact-name">Alireza Salem</div>
+        <div class="detail-value">09132768702</div>
+        <div class="detail-actions">
+          <a class="action" href="tel:09132768702">Call</a>
+        </div>
+      </div>
+
+      <button class="card link-card" id="save-contact" type="button">
+        <span>Save Contact</span>
+      </button>
+    </section>
+
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark and light mode">
+      <span id="theme-label">Light Mode</span>
+    </button>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
 </body>
-
 </html>
