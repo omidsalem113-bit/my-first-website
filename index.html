@@ -108,7 +108,7 @@
       -webkit-text-size-adjust: 100%;
       overflow-x: hidden;
     }
-    html[lang="fa"] body { font-family: var(--font-fa); line-height: 1.7; }
+    html[lang="fa"] body { font-family: var(--font-fa); }
 
     ::selection { background: var(--accent); color: var(--on-accent); }
 
@@ -289,11 +289,12 @@
     .item:active { transform: translateY(0); }
 
     .text { min-width: 0; }
-    .title { display: block; font-size: 18px; font-weight: 500; }
+    .title { display: block; font-size: 18px; font-weight: 500; line-height: 1.4; }
     .sub {
       display: block;
       margin-top: 2px;
       font-size: 15px;
+      line-height: 1.4;
       color: var(--sub);
       overflow-wrap: anywhere;
     }
